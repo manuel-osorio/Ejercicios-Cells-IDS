@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica html </title>
+    <link rel="stylesheet" href="estiloReloj.css">
+</head>
+<body>
+    <h1 class="Titulo">Ejercicios Practica JS</h1>
+    
+    <section>
+        <h1 class="contenedor" id="HrActual"></h1>
+        </section>
+ 
+
+    <h3>ProblemaJS02  E.1 </h3>
+    <table >
+        <thead class="cabecera" > 
+            <tr>
+                <td>PersonaId</td>
+                <td>Nombre</td>
+                <td>Ciudad</td>
+                <td>Número Celular</td>
+            </tr>
+        </thead>
+        <tbody id="containerTable">
+
+        </tbody>
+    </table>
+
+
+
+ <section>
+    <h3>ProblemaJS02  E.2 </h3>
+    <br>
+
+    <ul>
+        <li id="C1" data-id="US" data-dial-code="1">USA</li>
+        <li id="C2" data-id="CA" data-dial-code="1">Canada</li>
+        <li id="C3" data-id="FF" data-dial-code="3">France</li>
+    </ul>
+    <br>
+
+
+ </section>
+ <script type="text/javascript">
+    let elementos =  document.querySelectorAll('li[data-id]');
+    let li1 =  document.getElementById('C1');
+    let li2 = document.getElementById('C2');
+    let li3 = document.getElementById('C3');
+    llamada(li1)
+    llamada(li2)
+    llamada(li3)
+    function  llamada(res){
+        res.addEventListener('click',function(e){
+                alert('Elemento Selecionado\n'+'Id Elemento:'+ res.id+
+                '\nISO ID:'+res.dataset.id+'\nDial Code:'+res.dataset.dialCode);
+            });
+        }
+</script>
+
+<h3>ProblemaJS02  E.2 </h3>
+    <br>
+        <div id="post-102">
+            <p>I like confirm modals</p>
+            <a data-deletepost="post-102">Delete post</a>
+        </div>
+        <div id="post-103">
+            <p>That's way to cool!</p>
+            <a data-deletepost="post-103">Delete post</a>
+        </div>
+        <br>
+
+    
+
+    <script src="Script.js"></script>
+    
+</body>
+</html>
